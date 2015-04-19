@@ -7,22 +7,28 @@
    <div id="Frame">
       <div class="Head" id="Head">
          <div class="Row">
-            <strong class="SiteTitle"><a href="{link path="/"}">{logo}</a></strong>
+           <div id="header-container">
+             <strong class="SiteTitle"><a href="{link path="/"}"><img src="{link path="/"}themes/flow/design/flow-logo.png" alt="Logo">{logo}</a></strong>
+           </div>
+            <span>A place to discuss all things bees including Flow™ Hive, pests and disease, <br /> learning beekeeping, honey harvesting and much much more.</span>
             <div class="SiteSearch">{searchbox}</div>
+            <!--
             <ul class="SiteMenu">
-               <!-- {dashboard_link} -->
+               
+ {dashboard_link} 
                {discussions_link}
                {activity_link}
-               <!-- {inbox_link} -->
+               {inbox_link}
                {custom_menu}
-               <!-- {profile_link}
-               {signinout_link}  -->
+              {profile_link}
+               {signinout_link}  
+
             </ul>
+            -->
          </div>
       </div>
       <div id="Body">
          <div class="Row">
-            <div class="BreadcrumbsWrapper">{breadcrumbs}</div>
             <div class="Column PanelColumn" id="Panel">
                {module name="MeModule"}
                {asset name="Panel"}

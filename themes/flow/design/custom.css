@@ -1,14 +1,25 @@
-/* @override http://forum.honeyflow.com/themes/pure/design/custom.css?v=1.2 */
-
-@import url(http://fonts.googleapis.com/css?family=Lato);
+/* @override 
+	http://forum.honeyflow.com/themes/flow/design/custom.css?v=1.0
+*/
 
 body, h1, h2, h3, h4, h5, h6, .SiteTitle {
-    font-family: lato, sans-serif;
+    font-family: "rooney-sans",sans-serif
 }
 
 body {
-    font-size: 1em;
+	font-size: 100%;
+	line-height: 1.4em;
 }
+
+.Section-CategoryList div#Panel.Column.PanelColumn {
+	display: none;
+	width: 0px;
+}
+
+.Section-CategoryList #Body #Content {
+    margin-left: 0px !important;
+}
+
 
 body,
 .UserBox,
@@ -28,6 +39,12 @@ body,
 .DataTable .Title {
     font-size: 1em;
     color: #333;
+    background-color: #fcf6ea;
+}
+
+.Section-CategoryList #Body {
+	padding: 20px;
+	background-color: #ede7dc;
 }
 
 .ItemDiscussion .Meta,
@@ -42,9 +59,20 @@ dl.About dd,
 .InformMessages,
 .ButtonBarMarkupHint,
 .editor-help-text {
-    font-size: .9em;
-    padding-bottom: 10px;
+    font-size: 0.8em;
     line-height: 1.2em;
+    padding: 5px 0px;
+}
+
+.MItem {
+   margin-left: 0px;
+   margin-right: 18px;
+   white-space: normal;
+}
+
+.LastDiscussionTitle {
+	display: block;
+	margin: 10px 0;
 }
 
 .AuthorWrap {
@@ -68,7 +96,8 @@ dl.About dd,
 }
 
 .SiteTitle {
-    font-size: 2em;
+    font-size: 1.8em;
+    line-height: 2.4em;
 }
 
 .SiteMenu a:hover {
@@ -96,7 +125,9 @@ body.Profile.EditMode #Content form,
 #Panel .FilterMenu li:last-child,
 .PanelInfo li:last-child {
     border-bottom: none;
+    position: ;
 }
+
 
 #Panel .FilterMenu,
 .PanelInfo {
@@ -125,10 +156,33 @@ input.SmallInput:focus, input.InputBox:focus, textarea:focus {
     border-radius: 50%;
 }
 
+/* search */
 #Head .SiteSearch {
-    float: right;
-    margin-top: -7px;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
+	background: #fff;
 }
+
+#Head .SiteSearch {
+	
+}
+
+#Head .SiteSearch .InputBox {
+	padding: 9px;
+	border: none;
+	width: 100%;
+	font-size: 1.3em;
+}
+
+.SiteSearch .Button,
+.SiteSearch .Button:active {
+	margin: 6px;
+    background: url('../../../applications/dashboard/design/images/sprites.png') no-repeat  0px -195px transparent;
+}
+
+
 
 #Foot .PoweredByVanilla,
 .PoweredByVanilla:hover {
@@ -236,7 +290,6 @@ dl.About dd {
     border: none;
 }
 
-/* Pure */
 a,
 .FlyoutMenu a, a:hover, a.TextColor:hover, a:hover .TextColor {
     text-decoration: none;
@@ -259,13 +312,97 @@ a,
 }
 
 .BoxFilter a, .Box a {
-    color: #3D4F5D;
+    color: #000;
 }
 
 #Head {
+	height: 240px;
     background: #fbc038;
-    margin-bottom: 3px;
+    margin-bottom: 0px;
 }
+
+#Head #header-container {
+	border-bottom: solid 1px #e3ad24;
+	width: 100%;
+	float: none;
+}
+
+#Head .Row span {
+	display: block;
+	text-align: center;
+	padding: 22px 5px;
+	font-size: 1.1em;
+	color: #080404;
+}
+
+/* Home page content layout */
+
+.Section-CategoryList #Content, .Section-CategoryList #Foot {
+	margin: 0;
+}
+	
+.Section-CategoryList .DataList .CategoryHeading.Item {
+	clear: both;
+	width: 100%;
+	border-top: solid 1px #d5cdc3 !important;
+}
+
+.Section-CategoryList .DataList #Category_19.CategoryHeading.Item {
+	border: none !important;
+}
+
+
+
+.Section-CategoryList .CategoryHeading div.ItemContent.Category {
+	font-size: 1.6em;
+	line-height: 2em;
+}
+
+.Section-CategoryList .DataList .Item,
+.Section-CategoryList .NarrowList .Item {
+   width: 24%;
+   border: none;
+   position: static;
+}
+
+.Section-CategoryList .CategoryList .Depth2 {
+   width: 24%;
+   min-width: 180px;
+   float: left;
+   border: none;
+   height: 250px;
+}
+
+.DataList .Meta .RSS {
+	display: none;
+}
+
+.OptionsMenu {
+   background: inherit;
+}
+
+h1.HomepageTitle, div.P.PageDescription {
+	display: none;
+}
+
+.TitleWrap a.Title {
+	text-decoration: none !important;
+	font-size: 1em;
+	line-height: 1.9em;
+	margin-bottom: 5px;
+}
+
+
+.TitleWrap a:hover  {
+   background-color: #fbc038;
+   padding-left: 3px;
+}
+
+.ItemContent .CategoryDescription {
+	font-size: 0.9em;
+	margin-bottom: 15px;
+}
+
 
 .MenuItems a,
 .MenuItems a:link,
@@ -396,14 +533,14 @@ div.Message {
     padding: 8px 10px;
 }
 
-.SiteSearch .Button,
+/*.SiteSearch .Button,
 .SiteSearch .Button:active {
     background: url('../../../applications/dashboard/design/images/sprites.png') no-repeat scroll 0px -196px transparent;
     box-shadow: none;
     margin: 4px;
-}
+}*/
 
-/* Forms */
+ Forms 
 
 input[type="text"],
 input[type="password"],
@@ -583,27 +720,50 @@ textarea.MultiComplete {
 /* Layout */
 
 #Panel {
-    width: 220px;
+    float: left;
+    width: 280px;
+
+	background: #fff;
+	z-index: 999;
+	-webkit-box-shadow: 5px 0px 5px 0px rgba(50,50,50,0.75);
+	-moz-box-shadow: 5px 0px 5px 0px rgba(50,50,50,0.75);
+	box-shadow: 5px 0px 5px 0px rgba(50,50,50,0.75)
+}
+
+#Content {
+    
 }
 
 #Body .ContentColumn {
-    margin-left: 255px;
+    margin-left: 310px !important;
+    padding: 10px;
 }
 
 .Row {
-    margin: 0 auto;
-    width: 80%;
-    max-width: 1100px;
-    min-width: 940px;
+    margin: 0px auto;
+    width: 100%;
+}
+
+#Body {
+	margin-left: 0px;
+}
+
+#Foot {
+	width: 100%;
+	margin: 0px auto;
+	padding: 30px 0;
+    display: table;
+    clear: both;
+    border-top: solid 1px #e2dcd1;
 }
 
 @media (max-width: 1100px) {
     #Panel {
-        width: 220px;
+        width: ;
     }
 
     #Body .ContentColumn {
-        margin-left: 240px;
+        margin-left: ;
     }
 }
 
@@ -617,12 +777,12 @@ textarea.MultiComplete {
     }
 
     #Body .ContentColumn {
-        margin: 0;
+        margin-left: 0px !important;
     }
+    
 
     .Row {
         width: inherit;
-        margin: 0 20px;
         min-width: inherit;
     }
 
@@ -637,4 +797,9 @@ textarea.MultiComplete {
     #Content .BoxNewDiscussion .MenuItems {
         min-width: 275px;
     }
+    
+    #Head .SiteSearch {
+    width: 95%;
+}
+
 }
