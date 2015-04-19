@@ -83,7 +83,8 @@ dl.About dd,
 
 
 .DiscussionHeader {
-   margin: 0;
+   height: 40px;
+   padding: 0px;
 }
 
 .DiscussionHeader, .DiscussionHeader a, .CommentHeader, .CommentHeader a {
@@ -145,7 +146,16 @@ body.Profile.EditMode #Content form,
 .MenuItems,
 .NavButton {
     box-shadow: none;
+    text-align: left;
+    left: -10px;
+    background-color: #fff;
     /*border-radius:0;*/;
+}
+
+.MeBox .Flyout {
+    right: inherit;
+    left: 7px;
+    top: 150%;
 }
 
 input.SmallInput:focus, input.InputBox:focus, textarea:focus {
@@ -192,6 +202,11 @@ input.SmallInput:focus, input.InputBox:focus, textarea:focus {
     background: none;
     color: #666;
 }
+
+dl.About dt {
+   padding-left: 14px;
+}
+
 
 a.ChangePicture {
     max-width: 200px;
@@ -447,6 +462,9 @@ a.Bookmarked:hover {
     color: #333;
 }
 
+.Item-Body {
+}
+
 div.Message {
 	clear: ;
 }
@@ -469,14 +487,6 @@ div.Message {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-.Button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-}
-
-.Button {
     font-family: inherit;
     font-size: 100%;
     padding: 0.5em 1em;
@@ -486,6 +496,11 @@ div.Message {
     box-shadow: none;
     text-shadow: none;
     border-radius: 2px;
+}
+
+.Button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
 }
 
 .Button:hover,
@@ -531,6 +546,10 @@ div.Message {
     display: block;
     text-align: center;
     padding: 8px 10px;
+}
+
+.PageControls.Top .Button {
+	display: none;
 }
 
 /*.SiteSearch .Button,
@@ -717,17 +736,60 @@ textarea.MultiComplete {
     min-height: 38px;
 }
 
+.MeBox {
+	position: relative;
+	margin: 0;
+	padding-bottom: 5px;
+}
+
+.UserBox .WhoIs,
+.MeBox .WhoIs, .MeBox .PhotoWrap {
+	text-align: left;
+	padding-top: 50px;
+}
+
+.WhoIs a.Username {
+	text-transform: capitalize;
+	line-height: 40px;
+	font-size: 1.3em;
+	background-color: inherit;
+}
+
+.WhoIs .ProfilePhoto {
+	margin-left: 10px;
+}
+
+.Flyout .ProfilePhoto {
+	margin-left: 0px;
+}
+
+
+.Flyout .PhotoWrap {
+	padding: 0px;
+}
+
+.MeMenu {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 45px;
+	background-color: #f2f2f2;
+	text-align: center;
+}
+
+.MeButton {
+	padding: 12px 15px;
+}
+
 /* Layout */
 
 #Panel {
     float: left;
     width: 280px;
-
 	background: #fff;
 	z-index: 999;
 	-webkit-box-shadow: 5px 0px 5px 0px rgba(50,50,50,0.75);
 	-moz-box-shadow: 5px 0px 5px 0px rgba(50,50,50,0.75);
-	box-shadow: 5px 0px 5px 0px rgba(50,50,50,0.75)
 }
 
 #Content {
@@ -757,13 +819,19 @@ textarea.MultiComplete {
     border-top: solid 1px #e2dcd1;
 }
 
+
+.ProfilePhotoLarge {
+	display: block;
+	margin: 0 auto;
+}
+
 @media (max-width: 1100px) {
     #Panel {
-        width: ;
+       
     }
 
     #Body .ContentColumn {
-        margin-left: ;
+        
     }
 }
 
