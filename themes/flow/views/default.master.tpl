@@ -8,7 +8,7 @@
       <div class="Head" id="Head">
          <div class="Row">
            <div id="header-container">
-             <strong class="SiteTitle"><a href="{link path="/"}"><img src="{link path="/"}themes/flow/design/flow-logo.png" alt="Logo">{logo}</a></strong>
+             <strong class="SiteTitle"><a href="{link path="/"}">{logo}</a></strong>
            </div>
             <span>A place to discuss all things bees including Flow™ Hive, pests and disease, <br /> learning beekeeping, honey harvesting and much much more.</span>
             <div class="SiteSearch">{searchbox}</div>

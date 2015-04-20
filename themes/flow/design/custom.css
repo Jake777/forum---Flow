@@ -97,8 +97,8 @@ dl.About dd,
 }
 
 .SiteTitle {
-    font-size: 1.8em;
-    line-height: 2.4em;
+	padding: 0px 0 0px 0;
+    margin: 0px 45px;
 }
 
 .SiteMenu a:hover {
@@ -169,7 +169,7 @@ input.SmallInput:focus, input.InputBox:focus, textarea:focus {
 /* search */
 #Head .SiteSearch {
     float: none;
-    margin: 0 auto;
+    margin: 30px auto;
     text-align: center;
     width: 60%;
 	background: #fff;
@@ -241,6 +241,15 @@ dl.About dd {
     padding: 0 8px 0 0;
 }
 
+
+
+.Sprite16 {
+	background: url('sidebar-icons.png') 0 0 no-repeat;
+	width: 29px;
+	height: 29px;
+	
+}
+
 .Sprite16, .OptionsTitle {
     opacity: 0.65;
 }
@@ -250,15 +259,19 @@ dl.About dd {
 }
 
 .SpNotifications, .SpGlobe {
-    background-position: -32px -84px;
+    background-position: 0 0px;
 }
 
 .SpInbox, .SpEnvelope {
-    background-position: 0px -100px;
+    background-position: -43px 0px;
 }
 
 .SpBookmarks, .SpStar {
-    background-position: -80px -116px;
+    background-position: -95px 0px;
+}
+
+.SpOptions, .SpStar {
+    background-position: -147px 0px;
 }
 
 .Item .Bookmark {
@@ -331,15 +344,15 @@ a,
 }
 
 #Head {
-	height: 240px;
     background: #fbc038;
     margin-bottom: 0px;
 }
 
 #Head #header-container {
+	padding-top: 10px;
+	height: 55px;
 	border-bottom: solid 1px #e3ad24;
 	width: 100%;
-	float: none;
 }
 
 #Head .Row span {
@@ -778,18 +791,19 @@ textarea.MultiComplete {
 }
 
 .MeButton {
-	padding: 12px 15px;
+	padding: 6px 9px;
 }
 
 /* Layout */
 
 #Panel {
     float: left;
-    width: 280px;
+    width: 270px;
 	background: #fff;
 	z-index: 999;
 	-webkit-box-shadow: 5px 0px 5px 0px rgba(50,50,50,0.75);
 	-moz-box-shadow: 5px 0px 5px 0px rgba(50,50,50,0.75);
+	box-shadow: 5px 3px 5px 0px rgba(50,50,50,0.45)
 }
 
 #Content {
