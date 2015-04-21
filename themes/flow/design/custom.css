@@ -77,9 +77,14 @@ dl.About dd,
 
 .AuthorWrap {
 	float: left;
-	padding-right: 1.5em;
-	line-height: 1em;
+	padding-right: 1.2em;
+	line-height: 1.6em;
 }
+
+a.PhotoWrap {
+	margin-bottom: 0 !important;
+}
+
 
 
 .DiscussionHeader {
@@ -89,6 +94,7 @@ dl.About dd,
 
 .DiscussionHeader, .DiscussionHeader a, .CommentHeader, .CommentHeader a {
 	color: #888 !important;
+	height: 42px;
 }
 
 
@@ -126,7 +132,6 @@ body.Profile.EditMode #Content form,
 #Panel .FilterMenu li:last-child,
 .PanelInfo li:last-child {
     border-bottom: none;
-    position: ;
 }
 
 
@@ -169,7 +174,7 @@ input.SmallInput:focus, input.InputBox:focus, textarea:focus {
 /* search */
 #Head .SiteSearch {
     float: none;
-    margin: 30px auto;
+    margin: 20px auto 30px auto;
     text-align: center;
     width: 60%;
 	background: #fff;
@@ -241,8 +246,6 @@ dl.About dd {
     padding: 0 8px 0 0;
 }
 
-
-
 .Sprite16 {
 	background: url('sidebar-icons.png') 0 0 no-repeat;
 	width: 29px;
@@ -281,6 +284,9 @@ dl.About dd {
 .Item:hover .Bookmark, .Item.Open .Bookmark,.Item .Bookmarked,.Item .Bookmarking {
     visibility: visible;
 }
+
+
+
 
 .DataList a.Delete:hover {
     background: none;
@@ -370,9 +376,8 @@ a,
 }
 	
 .Section-CategoryList .DataList .CategoryHeading.Item {
-	clear: both;
-	width: 100%;
-	border-top: solid 1px #d5cdc3 !important;
+	padding: 0;
+	border: none;
 }
 
 .Section-CategoryList .DataList #Category_19.CategoryHeading.Item {
@@ -386,19 +391,26 @@ a,
 	line-height: 2em;
 }
 
-.Section-CategoryList .DataList .Item,
-.Section-CategoryList .NarrowList .Item {
-   width: 24%;
-   border: none;
-   position: static;
+ul.DataList.CategoryList.CategoryListWithHeadings {
+	-webkit-column-width: 240px;
+	-moz-column-width: 240px;
+	column-width: 240px;
+}
+
+
+
+.Section-CategoryList .Depth1 .ItemContent,
+.Section-CategoryList .Depth1 .ItemContent {
+    -webkit-column-span: all;
+	column-span: all;
 }
 
 .Section-CategoryList .CategoryList .Depth2 {
-   width: 24%;
-   min-width: 180px;
-   float: left;
-   border: none;
-   height: 250px;
+	-webkit-column-break-inside:avoid;
+        -moz-column-break-inside:avoid;
+        column-break-inside:avoid;
+        height: 220px;
+        overflow: auto;
 }
 
 .DataList .Meta .RSS {
@@ -428,7 +440,7 @@ h1.HomepageTitle, div.P.PageDescription {
 
 .ItemContent .CategoryDescription {
 	font-size: 0.9em;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 
@@ -749,6 +761,10 @@ textarea.MultiComplete {
     min-height: 38px;
 }
 
+/* Sidebar */
+
+
+
 .MeBox {
 	position: relative;
 	margin: 0;
@@ -784,22 +800,45 @@ textarea.MultiComplete {
 .MeMenu {
 	position: absolute;
 	top: 0;
-	width: 100%;
+	left: -20px;
+	width: 270px;
 	height: 45px;
 	background-color: #f2f2f2;
 	text-align: center;
+	
 }
 
 .MeButton {
 	padding: 6px 9px;
 }
 
+.PanelCategories .Heading {
+	border-bottom: solid 1px #eaeaea;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.PanelCategories .Depth2 {
+	border: none;
+}
+
+.PanelColumn .PanelCategories {
+	font-size: 0.8em;
+}
+
+#Panel  .Active {
+	color: #fff !important;
+}
+
+
+
 /* Layout */
 
 #Panel {
     float: left;
-    width: 270px;
+    width: 230px;
 	background: #fff;
+	padding: 0 20px;
 	z-index: 999;
 	-webkit-box-shadow: 5px 0px 5px 0px rgba(50,50,50,0.75);
 	-moz-box-shadow: 5px 0px 5px 0px rgba(50,50,50,0.75);
